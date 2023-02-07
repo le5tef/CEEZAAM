@@ -1,0 +1,96 @@
+@import './tools'
+
+*
+  box-sizing border-box
+  -webkit-appearance none
+
+html
+body
+  margin 0
+  padding 0
+  font-family $fontDefault
+  font-size 14px
+  line-height 1.25
+  color $cText
+  background-color $cBackground
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  -webkit-text-size-adjust none
+
+html
+html body
+html body #app
+html body #app .layout
+html body #app .layout .page
+html body #app .layout .page .content
+  min-height $fullHeightNoHeader
+  min-width $fullWidthNoSidebar
+  @media (max-width $tabletVerWidth)
+    min-width 100%
+
+html.is-fullscreen
+html.is-fullscreen body
+html.is-fullscreen body #app
+html.is-fullscreen body #app .layout
+html.is-fullscreen body #app .layout .page
+  display flex
+  flex-direction column
+  align-items stretch
+  justify-content center
+  height auto
+
+img
+svg
+iframe
+object
+  max-width 100%
+  max-height 100%
+
+::-moz-focus-inner
+  border 0
+
+
+.layout
+  flex-grow 2
+
+
+.layout-default
+  background #F8F9FA
+
+.content
+  padding 32px 32px 0 32px
+  margin 0 auto
+  overflow-y auto
+  height $fullHeightNoHeader
+  @media (max-width $tabletVerWidth)
+    padding 16px 0 0 0
+
+
+.container
+  width 920px
+  margin 0 auto
+
+.container
+.container-fluid
+  max-width 100%
+  width-between-property 'padding-left' 320 16 768 24 true true
+
+.transition-basic
+  &:global(.v-enter-active)
+  &:global(.v-leave-active)
+    transition()
+
+  &:global(.v-enter-from)
+  &:global(.v-leave-to)
+    opacity 0
+    transform translateY(1rem)
+
+// auth
+.sz-auth
+  &__heading
+    margin-bottom 32px
+    font-size 26px
+    line-height 1.38
+    font-weight bold
+    text-align center
+

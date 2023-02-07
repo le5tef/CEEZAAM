@@ -1,0 +1,14 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.node.json",
+  "include": [
+    "plugins/envToHtml.ts",
+    "src/utils/makeEnvMetaTagString.ts",
+    "vite.config.*",
+    "vitest.config.*",
+    "cypress.config.*"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "types": ["node"]
+  }
+}

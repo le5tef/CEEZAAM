@@ -1,0 +1,42 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": ["src/types/*", "src/**/*", "src/**/*.vue", "./package.json"],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "removeComments": true,
+    "allowJs": false,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "resolveJsonModule": true,
+    "strictPropertyInitialization": false,
+    "types": [
+      "element-plus/global",
+      "@types/validator",
+      "@types/js-cookie",
+      "@types/lodash.shuffle",
+      "@types/lodash.throttle",
+      "vite/client"
+    ],
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+  }
+}

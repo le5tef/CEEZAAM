@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html class="notranslate" lang="ru" translate="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+    <meta content="notranslate" name="google" />
+    <meta content="#141414" name="theme-color" />
+    <meta content="#141414" name="msapplication-TileColor" />
+    <link href="/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+    <!--prql-env-meta-->
+    <title>seezaam</title>
+    <style>
+      @keyframes prqlLoaderRotate {
+        0% {
+          transform: rotateY(0deg);
+        }
+        50% {
+          transform: rotateY(360deg) scale(1.1);
+        }
+        100% {
+          transform: rotateY(360deg);
+        }
+      }
+
+      .prqlLoaderScrollLock {
+        position: fixed;
+        overflow: hidden;
+      }
+
+      #prqlLoader {
+        position: fixed;
+        z-index: 99999;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 0;
+        transition: opacity 300ms cubic-bezier(0.1, 0.57, 0.1, 1);
+        transition-delay: 150ms;
+        perspective: 200px;
+        user-select: none;
+        background-color: #b03ca5;
+        background: linear-gradient(90deg, #ff6e00 0%, #bb00ff 89%);
+      }
+
+      #prqlLoader.goodbye {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      #prqlLoaderLogo {
+        width: 64px;
+        height: 64px;
+        animation: prqlLoaderRotate ease 2000ms infinite;
+        animation-fill-mode: forwards;
+      }
+    </style>
+
+    <!-- Google Tag Manager -->
+    <!-- <script>
+      window.dataLayer = []
+    </script>
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-YOUR_CODE');</script> -->
+    <!-- End Google Tag Manager -->
+  </head>
+  <body class="prqlLoaderScrollLock">
+    <!-- Google Tag Manager (noscript) -->
+    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-YOUR_CODE" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="prqlLoader">
+      <svg id="prqlLoaderLogo" fill="none" viewBox="0 0 76 75" xmlns="http://www.w3.org/2000/svg">
+        <path
+          clip-rule="evenodd"
+          d="M75.5 37.5C75.5 58.2107 58.7107 75 38 75C17.2893 75 0.5 58.2107 0.5 37.5C0.5 16.7893 17.2893 0 38 0C58.7107 0 75.5 16.7893 75.5 37.5ZM57.9627 15.3644C60.2623 17.5673 62.5155 19.8166 64.7223 22.1124C66.0916 23.5383 65.7334 25.8926 64.0986 26.9979C62.7162 27.9321 61.1641 27.7232 59.815 26.4032C58.8813 25.4895 57.9621 24.5605 57.0825 23.6716C56.6914 23.2763 56.3081 22.8888 55.9348 22.5142L52.3475 26.1102C52.542 26.2952 52.7439 26.4861 52.9507 26.6814C53.4165 27.1215 53.9067 27.5847 54.3899 28.0568C55.0877 28.7386 55.7854 29.4204 56.457 30.1282C57.8974 31.6484 57.6537 33.9925 55.9522 35.1443C54.6046 36.0567 53.0235 35.8797 51.7281 34.6177C50.7722 33.686 49.8324 32.7367 48.9045 31.7993C48.5033 31.394 48.1043 30.9909 47.7072 30.5924L41.9412 36.3555L41.9649 36.3845C42.1478 36.6078 42.3393 36.8417 42.5214 37.0808C45.3979 40.8595 46.5583 45.1213 45.746 49.7877C44.2171 58.5593 36.7888 64.1773 27.9157 63.4143C18.5827 62.6136 11.6693 53.3402 13.5362 44.145C15.6439 33.8127 26.0633 28.1468 35.8329 32.0444C36.4189 32.2838 36.7438 32.1735 37.1601 31.7543C42.4083 26.4946 47.6598 21.2392 52.9147 15.9881C53.1519 15.7385 53.4028 15.5022 53.6661 15.2802C55.0499 14.1648 56.6833 14.1358 57.9627 15.3644ZM25.7635 54.1387C27.1026 55.0332 28.6769 55.5105 30.2873 55.5102C32.4465 55.5098 34.5171 54.6518 36.0437 53.125C37.5703 51.5981 38.4279 49.5273 38.4279 47.3682C38.4279 45.7578 37.9504 44.1836 37.0556 42.8446C36.1609 41.5056 34.8892 40.462 33.4014 39.8458C31.9135 39.2296 30.2764 39.0685 28.6969 39.3827C27.1175 39.697 25.6667 40.4726 24.5281 41.6114C23.3895 42.7503 22.6141 44.2012 22.3001 45.7807C21.9862 47.3601 22.1476 48.9973 22.7641 50.485C23.3805 51.9728 24.4243 53.2443 25.7635 54.1387Z"
+          fill="white"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
+
+    <script type="text/javascript">
+      function PrqlLoader() {
+        this.loaderId = 'prqlLoader'
+        this.loaderNode = document.getElementById(this.loaderId)
+        this.isVisible = true
+
+        this.hide = function () {
+          if (!this.isVisible) {
+            return
+          }
+
+          this.isVisible = false
+          this.loaderNode.addEventListener('transitionend', (event) => {
+            if (event.srcElement.id === this.loaderId && this.loaderNode) {
+              this.loaderNode.parentNode.removeChild(this.loaderNode)
+            }
+          })
+          this.loaderNode.className = 'goodbye'
+          document.body.classList.remove('prqlLoaderScrollLock')
+        }.bind(this)
+      }
+
+      window.prqlLoader = new PrqlLoader()
+    </script>
+    <div id="app"></div>
+    <script src="/src/main.ts" type="module"></script>
+  </body>
+</html>
